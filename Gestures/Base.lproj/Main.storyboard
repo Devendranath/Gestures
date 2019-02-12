@@ -1,0 +1,91 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="14460.20"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="ViewController" customModule="Gestures" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="0001" translatesAutoresizingMaskIntoConstraints="NO" id="4OX-kw-ET9">
+                                <rect key="frame" x="20" y="45" width="335" height="500"/>
+                                <gestureRecognizers/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="500" id="RMB-X3-llB"/>
+                                </constraints>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="IhT-6U-83T" appends="YES" id="lFm-t7-aQf"/>
+                                    <outletCollection property="gestureRecognizers" destination="HPq-D7-3Yw" appends="YES" id="s3n-zT-2iB"/>
+                                </connections>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="4OX-kw-ET9" secondAttribute="trailing" constant="20" id="f7J-jA-XGs"/>
+                            <constraint firstItem="4OX-kw-ET9" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="qNg-Uc-wQc"/>
+                            <constraint firstItem="4OX-kw-ET9" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="25" id="zmf-9B-47P"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
+                        <connections>
+                            <outletCollection property="gestureRecognizers" destination="8rG-VC-hPk" appends="YES" id="nZQ-cb-oV0"/>
+                            <outletCollection property="gestureRecognizers" destination="xVa-zs-d8C" appends="YES" id="wn8-Ld-laW"/>
+                            <outletCollection property="gestureRecognizers" destination="U3p-vp-GHK" appends="YES" id="m4j-jP-e2G"/>
+                            <outletCollection property="gestureRecognizers" destination="BfR-VN-aB5" appends="YES" id="1ys-xk-fvZ"/>
+                        </connections>
+                    </view>
+                    <connections>
+                        <outlet property="imageview" destination="4OX-kw-ET9" id="qVR-8D-6G8"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+                <gestureRecognizer id="BfR-VN-aB5">
+                    <connections>
+                        <action selector="gestureRec:" destination="BYZ-38-t0r" id="tgQ-b2-PMC"/>
+                    </connections>
+                </gestureRecognizer>
+                <screenEdgePanGestureRecognizer minimumNumberOfTouches="1" id="U3p-vp-GHK">
+                    <rectEdge key="edges" bottom="YES"/>
+                    <connections>
+                        <action selector="screenEdge:" destination="BYZ-38-t0r" id="4wN-8N-fOe"/>
+                    </connections>
+                </screenEdgePanGestureRecognizer>
+                <swipeGestureRecognizer direction="right" id="8rG-VC-hPk">
+                    <connections>
+                        <action selector="rightSwipe:" destination="BYZ-38-t0r" id="vaX-Go-Mo5"/>
+                    </connections>
+                </swipeGestureRecognizer>
+                <rotationGestureRecognizer rotation="2" id="HPq-D7-3Yw">
+                    <connections>
+                        <action selector="rotate:" destination="BYZ-38-t0r" id="jCH-zJ-eJm"/>
+                    </connections>
+                </rotationGestureRecognizer>
+                <pongPressGestureRecognizer allowableMovement="10" minimumPressDuration="1" id="xVa-zs-d8C">
+                    <connections>
+                        <action selector="longPress:" destination="BYZ-38-t0r" id="fAU-DU-sKd"/>
+                    </connections>
+                </pongPressGestureRecognizer>
+                <tapGestureRecognizer numberOfTapsRequired="2" id="IhT-6U-83T">
+                    <connections>
+                        <action selector="userTapped:" destination="BYZ-38-t0r" id="BKp-UD-AZK"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="136.80000000000001" y="130.88455772113943"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="0001" width="305.760009765625" height="505.20001220703125"/>
+    </resources>
+</document>
